@@ -21,12 +21,11 @@ def stellaQuadParam(t, lato, livello, n_lati):
         t.left(2*180/n_lati)
     return
 
-'''
-window = turtle.Screen()
-t = turtle.Pen()
-t.hideturtle()
-t.speed(100)
-#stellaQuad(t, 200, 2)
-stellaQuadParam(t, 50, 2, 5)
-window.exitonclick()
-'''
+if __name__ == "__main__":
+    window = turtle.Screen()
+    t = turtle.Pen()
+    t.hideturtle()
+    t.speed(100)
+    #stellaQuad(t, 200, 2)
+    stellaQuadParam(t, 50, 2, 5)
+    window.exitonclick()

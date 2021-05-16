@@ -33,11 +33,10 @@ def triSierpinski(t, lato, livello):
     return
 
 
-'''
-window = turtle.Screen()
-t=turtle.Pen()
-#t.hideturtle()
-t.speed(5)
-triSierpinski(t,250,4)
-window.exitonclick()
-'''
+if __name__ == "__main__":
+    window = turtle.Screen()
+    t=turtle.Pen()
+    #t.hideturtle()
+    t.speed(5)
+    triSierpinski(t,250,4)
+    window.exitonclick()

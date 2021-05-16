@@ -15,18 +15,20 @@ def alberoBernRec(t1, dim, angolo, livello, livelloInizio):
     alberoBernRec(t1, dim / 2, angolo, livello - 1, livelloInizio)
     alberoBernRec(t2, dim / 2, angolo, livello - 1, livelloInizio)
 
+
 def alberoBern(t, dim, angolo, livello):
     t.hideturtle()
     alberoBernRec(t, dim, angolo, livello, livello)
     return
 
-'''
-window = turtle.Screen()
 
-t = turtle.Pen()
-t.hideturtle()
+if __name__ == "__main__":
+    window = turtle.Screen()
 
-alberoBern(t, 80, 100, 5)
+    t = turtle.Pen()
+    t.hideturtle()
 
-window.exitonclick()
-'''
+    alberoBern(t, 80, 100, 1)
+
+    window.exitonclick()
+

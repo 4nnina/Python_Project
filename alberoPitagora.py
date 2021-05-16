@@ -47,10 +47,10 @@ def alberoPitagora(t,lato, angolo, livelli):
     triQuad(t, lato, angolo, livelli)
     return
 
-'''
-window = turtle.Screen()
-t = turtle.Pen()
+if __name__ == "__main__":
+    window = turtle.Screen()
+    t = turtle.Pen()
 
-alberoPitagora(t,50,30,6)
-window.exitonclick()
-'''
+    alberoPitagora(t,50,30,6)
+    window.exitonclick()
+

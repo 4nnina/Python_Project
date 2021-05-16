@@ -31,12 +31,12 @@ def stellaKochParam(t, lato, livello, n_lati):
         t.left(2*180/n_lati)
     return
 
-'''
-window = turtle.Screen()
-t = turtle.Pen()
-t.hideturtle()
-t.speed(100)
-#stellaEsa(t, 100, 1)
-stellaKochParam(t, 50, 2, 10)
-window.exitonclick()
-'''
+if __name__ == "__main__":
+    window = turtle.Screen()
+    t = turtle.Pen()
+    t.hideturtle()
+    t.speed(100)
+    #stellaTri(t, 100, 0)
+    #stellaEsa(t, 100, 1)
+    stellaKochParam(t, 50, 2, 3)
+    window.exitonclick()

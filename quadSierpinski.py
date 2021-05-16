@@ -34,11 +34,10 @@ def quadSierpinski(t, lato, livello):
     t.pendown()
     return
 
-'''
-window = turtle.Screen()
-t=turtle.Pen()
-#t.hideturtle()
-t.speed(10)
-quadSierpinski(t,200,3)
-window.exitonclick()
-'''
+if __name__ == "__main__":
+    window = turtle.Screen()
+    t=turtle.Pen()
+    #t.hideturtle()
+    t.speed(10)
+    quadSierpinski(t, 200, 3)
+    window.exitonclick()
