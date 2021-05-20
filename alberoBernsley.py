@@ -29,6 +29,6 @@ if __name__ == "__main__":
     t.hideturtle()
 
     alberoBern(t, 80, 100, 1)
+    ts = turtle.getscreen()
 
     window.exitonclick()
-

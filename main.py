@@ -1,4 +1,7 @@
+#https://www.reddit.com/r/learnpython/comments/7wwtj5/saving_turtle_graphics_output_as_png_or_jgp/
+import io
 import turtle
+from PIL import Image
 
 from alberoBernsley import alberoBern
 from alberoPitagora import alberoPitagora
@@ -99,6 +102,20 @@ def oneFun():
             quadSierpinski(pen, dim, livelli)
         else:
             return
+
+        saveimg = input('\nSi vuole salvare l\'immagine?(S/N)\t')
+        if saveimg.lower() == 's':
+            filename = input('Inserire il nome del file in cui si vuole salvare\t') + '.png'
+            ps = turtle.getscreen().getcanvas().postscript(colormode="color")
+            im = Image.open(io.BytesIO(ps.encode("utf-8")))
+            im.save(filename, lossless = True)
+            #ts = turtle.getscreen()
+            #ts.getcanvas().postscript(file='out.eps')
+            #convertire in png
+            #im = Image.open('out.eps')
+            #fig = im.convert('RGBA')
+            #fig.save('testImg.png', lossless = True)
+            print('... Salvataggio completato')
 
         print('\nPer terminare cliccare sulla finestra')
         window.exitonclick()
