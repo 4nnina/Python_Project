@@ -1,4 +1,4 @@
-#https://www.reddit.com/r/learnpython/comments/7wwtj5/saving_turtle_graphics_output_as_png_or_jgp/
+
 import io
 import turtle
 from PIL import Image
@@ -21,6 +21,16 @@ def inizializeTrutle():
     p = turtle.Pen()
     w = turtle.Screen()
     return p, w
+
+
+def saveImage():
+    filename = './imgOutput/' + input('Inserire il nome del file in cui si vuole salvare\t') + '.png'
+    ps = turtle.getscreen().getcanvas().postscript(colormode="color")
+    im = Image.open(io.BytesIO(ps.encode("utf-8")))
+    im.save(filename, lossless=True)
+    # ts = turtle.getscreen()
+    # ts.getcanvas().postscript(file='out.eps')
+    return
 
 
 def allFun():
@@ -68,7 +78,7 @@ def oneFun():
             print('1. Albero di Bernsley\n2. Albero di Pitagora\n3. Figura con curva di Koch')
             print('4. Figura con curva di Koch modificata (quadrato invece di trinagolo)\n5. Triangolo di Sierpinski\n'
                   '6. Tringolo di Sierpinski con quadrati\n7. Torna al menù principale')
-            sc = int(input('Scleta: \t'))
+            sc = int(input('Scelta: \t'))
             if sc > 0 and sc <= 7:
                 break
             else:
@@ -77,6 +87,9 @@ def oneFun():
         if sc != 7:
             dim = int(input('Lunghezza lato:\t'))
             livelli = int(input('Numero livelli (livello base = 0):\t'))
+
+        # per evitare l'apertura dello schermo prima dell'inserimento di tutte le informazioni
+        # pen, window = inizializeTrutle()
 
         if sc == 1:
             angolo = int(input('Angolo tra i due rami:\t'))
@@ -105,16 +118,7 @@ def oneFun():
 
         saveimg = input('\nSi vuole salvare l\'immagine?(S/N)\t')
         if saveimg.lower() == 's':
-            filename = input('Inserire il nome del file in cui si vuole salvare\t') + '.png'
-            ps = turtle.getscreen().getcanvas().postscript(colormode="color")
-            im = Image.open(io.BytesIO(ps.encode("utf-8")))
-            im.save(filename, lossless = True)
-            #ts = turtle.getscreen()
-            #ts.getcanvas().postscript(file='out.eps')
-            #convertire in png
-            #im = Image.open('out.eps')
-            #fig = im.convert('RGBA')
-            #fig.save('testImg.png', lossless = True)
+            saveImage()
             print('... Salvataggio completato')
 
         print('\nPer terminare cliccare sulla finestra')
