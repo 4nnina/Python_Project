@@ -1,9 +1,11 @@
-# LINGUAGGIO DI PROGRAMMAZIONE PYTHON - 2020/2021
-This is the final project for the 'Linguaggi di programmazione Python' course at the University of Verona, during the last year of bachelor's degree in Computer Science.
-This is a mathematical curve drawing program that uses recursion. Drawings are made with Turtle module of Python. The documentation presented for the exam below. 
+# LINGUAGGIO DI PROGRAMMAZIONE PYTHON 
+Questo è il progetto finale del corso "Linguaggi di programmazione Python" dell'Università di Verona, svolto durante l'ultimo anno della laurea in Informatica.
+E\' un programma che disegna delle curve matematiche utilizzando la ricorsione. E\' stata utilizzata la libreria Turtle di Python. Quanto segue è la documentazione presentata in esame.
+
 
 **PROGETTO**: Curve
-**AUTORE**:   Anna Dalla Vecchia - https://github.com/4nnina
+
+**AUTORE**:   Anna Dalla Vecchia 
 
 Il progetto è stato suddiviso in più file, ogni file contiene le funzioni per la costruzione di una specifica curva.
 Per poter avviare l'intero progetto occorre eseguire il file main.py.
